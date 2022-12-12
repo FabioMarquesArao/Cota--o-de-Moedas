@@ -104,4 +104,3 @@ class Bot():
         print(self.nome_dollar, "Neste momento...", self.dollar)
         print(self.nome_euro, "Neste momento...", self.euro)
         print(self.nome_btc, "Neste momento...", self.btc)
-   
