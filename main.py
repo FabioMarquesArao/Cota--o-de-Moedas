@@ -1,46 +1,23 @@
-from requests import *
-import os
-from Email import Email
-from Email2 import Email2
-from config import *
-from twilio.rest import Client
+from bot import Bot
 from rocketry import Rocketry
+
+
 
 app = Rocketry()
 
-@app.task('minutely')
+@app.task('every 1 hour') #Rodará a aplicação a cada hora
 class aplication():
     def __init__(self):
-
-        url = get('https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL')
-        url_2 = url.json()
-        nome_dollar = url_2['USDBRL']['name']
-        dollar = url_2['USDBRL']['bid']
-
-        nome_euro = url_2['EURBRL']['name']
-        euro = url_2['EURBRL']['bid']
-
-        nome_btc = url_2['BTCBRL']['name']
-        btc = url_2['BTCBRL']['bid']
-
-        Email2(nome_dollar, dollar, nome_euro, euro, nome_btc, btc)
-        """ account_sid = account_sidd
-        auth_token = auth_tokenn
-        client = Client(account_sid, auth_token)
-
-        message = client.messages \
-                        .create(
-                            body = f'-----{nome}, Neste momento no valor de....R${dollar}',
-                            from_= fromm,
-                            to = too
-                        )"""
-        print(nome_dollar, "Neste momento...", dollar)
-        print(nome_euro, "Neste momento...", euro)
-        print(nome_btc, "Neste momento...", btc)
+        self.bot = Bot()
+        try:
+            self.bot.email2()
+            self.bot.send_txt()
+            self.bot.log()
+        except:
+            self.bot.email_error()
 
 
 
 
 if __name__ == "__main__":
     app.run()
-    #aplication()
