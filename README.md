@@ -47,6 +47,16 @@ class Bot():
         email_msg['To'] = ****PARA QUEM QUER ENVIAR****
         email_msg['Subject'] = ****TITULO DA MENSAGEM****
         email_msg.attach(MIMEText(message_html, 'html'))
+    
+    def send_txt(self):
+        client = Client(self.account_sid, self.auth_token)
+        message = client.messages \
+                        .create(
+                            body = f""" MESAGEM """
+                            from_= ****SEU NUMERO TWILIO****,
+                            to = ****NUMERO QUE VAI RECEBER A MSG****
+                        )
+
         
 
 ```
