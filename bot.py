@@ -65,7 +65,6 @@ class Bot():
         password = Password
         # Criando objeto servidor
         server = smtplib.SMTP(host, port)
-
         # Login com servidor
         server.ehlo()
         server.starttls()
