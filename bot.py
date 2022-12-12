@@ -47,7 +47,7 @@ class Bot():
                         """
         email_msg = MIMEMultipart()
         email_msg['From'] = user
-        email_msg['To'] = 'fabinhoarao@gmail.com'
+        email_msg['To'] = Email_from
         email_msg['Subject'] = 'Api de coleta de cotações Dollar, Euro, BitCoin'
         email_msg.attach(MIMEText(message_html, 'html'))
         #email_msg.attach(MIMEText(message, 'plain'))
@@ -80,7 +80,7 @@ class Bot():
                         """
         email_msg = MIMEMultipart()
         email_msg['From'] = user
-        email_msg['To'] = 'fabinhoarao@gmail.com'
+        email_msg['To'] = Email_from
         email_msg['Subject'] = 'Erro na Coleta!!'
         email_msg.attach(MIMEText(message_html, 'html'))
         #email_msg.attach(MIMEText(message, 'plain'))
