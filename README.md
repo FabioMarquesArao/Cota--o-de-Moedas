@@ -1,6 +1,6 @@
 
 
-<h1 align ="center "> Cotação de Moedas</h1>
+<h1 align ="center "> Cotação de Moedas!!!</h1>
 
 
 - A aplicação busca de hora em hora ou minuto a minuto a cotação das moedas escolhidas e manda um sms com as informações coletadas para o numero de celular programado e ou email escolhido.
