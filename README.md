@@ -60,4 +60,7 @@ class Bot():
         
 
 ```
+## Feedback
+
+Se você tiver algum feedback, por favor nos deixe saber por meio de fabinhoarao@gmail.com
 
